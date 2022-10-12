@@ -13,6 +13,12 @@ router.post(
   userController.getUserProfile
 )
 
+router.get(
+  '/profile',
+  tokenValidation.validateToken,
+  userController.getUserProfile
+)
+
 router.put(
   '/profile',
   tokenValidation.validateToken,
